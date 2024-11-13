@@ -1,5 +1,3 @@
-CREATE DATABASE vulnerable_db;
-
 USE vulnerable_db;
 
 CREATE TABLE users (
