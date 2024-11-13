@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const session = require('express-session');
+const path = require('path');
 
 const app = express();
 
@@ -12,11 +13,14 @@ app.use(session({
   saveUninitialized: true
 }));
 
+// Définir le dossier des fichiers statiques
+app.use(express.static(path.join(__dirname, 'views')));
+
 // Connexion MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '',
+  user: 'Web',
+  password: 'goodpassword',
   database: 'vulnerable_db'
 });
 
