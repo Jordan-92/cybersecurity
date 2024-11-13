@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable Website - XSS</title>
+</head>
+<body>
+    <h1>Page de test XSS</h1>
+    <form action="/xss" method="get">
+        <label for="input">Entrez du texte (potentiellement dangereux) :</label><br>
+        <input type="text" id="input" name="input"><br><br>
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
