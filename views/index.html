@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vulnerable Website - XSS</title>
+    <title>Accueil</title>
 </head>
 <body>
-    <h1>Page de test XSS</h1>
+    <h1>Entrer une donnée</h1>
     <form action="/xss" method="get">
-        <label for="input">Entrez du texte (potentiellement dangereux) :</label><br>
+        <label for="input">Entrez du texte</label><br>
         <input type="text" id="input" name="input"><br><br>
         <input type="submit" value="Envoyer">
     </form>
+    <br>
+    <!-- Bouton qui emmène vers /login -->
+    <button onclick="window.location.href='/login'">Aller à la page de connexion</button>
 </body>
 </html>
